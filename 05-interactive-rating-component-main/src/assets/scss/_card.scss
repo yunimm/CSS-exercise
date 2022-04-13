@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+html {
+  font-size: 10px;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+}
+body {
+  background-color: $VeryDarkBlue;
+  max-width: 375px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: $DarkBlue;
+  gap: 2rem;
+  padding: 3rem 2.5rem;
+  border-radius: 2rem;
+  .img-star-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include circle(5rem, $MediumGrey, 50%);
+  }
+  .card-title {
+    color: $White;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+  .card-p {
+    color: $LightGrey;
+    font-size: 1.5rem;
+    line-height: 2rem;
+    padding-right: 2rem;
+  }
+  .items {
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    li {
+      @include circle(5rem, $MediumGrey, 50%);
+      color: $LightGrey;
+      text-align: center;
+      line-height: 5rem;
+      font-size: 1.3rem;
+    }
+    li:hover {
+      background-color: $Orange;
+      color: $White;
+    }
+    .active {
+      background-color: $LightGrey;
+      color: $White;
+    }
+  }
+  li,
+  .btn {
+    cursor: pointer;
+  }
+  .btn {
+    background-color: $Orange;
+    color: $White;
+    width: 100%;
+    padding: 2rem 2rem;
+    border-radius: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+  }
+  .btn:hover {
+    background-color: $White;
+    color: $Orange;
+  }
+}
+
+.thx {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  span {
+    color: $Orange;
+    font-size: 1.3rem;
+    background-color: $MediumGrey;
+    padding: 1rem 2rem;
+    border-radius: 2rem;
+  }
+}
+
+.hidden {
+  display: none;
+}
+.visible {
+  display: flex;
+}
