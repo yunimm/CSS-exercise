@@ -1,22 +1,21 @@
 <script setup>
-import { ref } from 'vue'
-const items = ref([
-  { id: 111, item: 1, isActive: false },
-  { id: 222, item: 2, isActive: false },
-  { id: 333, item: 3, isActive: false },
-  { id: 444, item: 4, isActive: false },
-  { id: 555, item: 5, isActive: false },
+import { ref, reactive } from 'vue'
+
+const itemB = reactive([
+  { id: 1, item: 1, isActive: false },
+  { id: 2, item: 2, isActive: false },
+  { id: 3, item: 3, isActive: false },
+  { id: 4, item: 4, isActive: false },
+  { id: 5, item: 5, isActive: false },
 ])
-
 const isHidden = ref(false)
-
-const toggleActive = (item) => {
-  item.isActive = !item.isActive
-  console.log(items)
+const num = ref('')
+function toggleActive(key) {
+  itemB[key].isActive = !itemB[key].isActive
+  num.value = itemB[key].item
 }
 function handleSubmitted() {
-  console.log('點我')
-  isHidden = !isHidden
+  isHidden.value = !isHidden.value
 }
 </script>
 
@@ -37,17 +36,17 @@ function handleSubmitted() {
       </p>
       <ul class="items">
         <li
-          v-for="({ id, item, isActive }, index) in items"
+          v-for="({ id, item, isActive }, index) in itemB"
           :key="id"
+          @click="toggleActive(index)"
           :class="{ active: isActive }"
-          @click="toggleActive(items[index])"
         >
           {{ item }}
         </li>
       </ul>
       <button type="button" class="btn" @click="handleSubmitted">Submit</button>
     </div>
-    <div class="card thx" :class="{ hidden: isHidden }">
+    <div class="card thx" :class="{ hidden: !isHidden }">
       <div class="img-container">
         <img
           class="card-thx"
@@ -55,7 +54,7 @@ function handleSubmitted() {
           alt="img on screen"
         />
       </div>
-      <span>You selected 替換數字 out of 5</span>
+      <span>You selected {{ num }} out of 5</span>
       <div class="card-title">Thank you!</div>
       <p class="card-p">
         We appreciate you taking the time to give a rating. If you ever need
