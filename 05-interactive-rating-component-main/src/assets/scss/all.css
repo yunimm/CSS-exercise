@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+img {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+button {
+  border: none;
+}
+
+html {
+  font-size: 10px;
+  font-family: 'Overpass', sans-serif;
+  font-weight: 400;
+}
+
+body {
+  background-color: #121417;
+  max-width: 375px;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+}
+
+.card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #252d37;
+  gap: 2rem;
+  padding: 3rem 2.5rem;
+  border-radius: 2rem;
+}
+
+.card .img-star-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: #2f353d;
+  border-radius: 50%;
+}
+
+.card .card-title {
+  color: white;
+  font-weight: 700;
+  font-size: 2.5rem;
+}
+
+.card .card-p {
+  color: #959eac;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  padding-right: 2rem;
+}
+
+.card .items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+
+.card .items li {
+  width: 5rem;
+  height: 5rem;
+  background-color: #2f353d;
+  border-radius: 50%;
+  color: #959eac;
+  text-align: center;
+  line-height: 5rem;
+  font-size: 1.3rem;
+}
+
+.card .items li:hover {
+  background-color: #fb7413;
+  color: white;
+}
+
+.card .items .active {
+  background-color: #959eac;
+  color: white;
+}
+
+.card li,
+.card .btn {
+  cursor: pointer;
+}
+
+.card .btn {
+  background-color: #fb7413;
+  color: white;
+  width: 100%;
+  padding: 2rem 2rem;
+  border-radius: 4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+}
+
+.card .btn:hover {
+  background-color: white;
+  color: #fb7413;
+}
+
+.thx {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+.thx span {
+  color: #fb7413;
+  font-size: 1.3rem;
+  background-color: #2f353d;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=all.css.map */

@@ -1,0 +1,8 @@
+@mixin btn-style($color) {
+  color: $color;
+  &:hover {
+    border: 1px solid white;
+    background-color: $color;
+    color: white;
+  }
+}
