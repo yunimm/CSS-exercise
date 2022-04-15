@@ -10,6 +10,9 @@
 03:
 ![GITHUB](https://github.com/yunimm/CSS-exercise/blob/main/03-stats-preview-card-component-main/final.gif?raw=true)
 ***
+04:
+![GITHUB](https://github.com/yunimm/CSS-exercise/blob/main/04-3-column-preview-card-component-main/final.gif)
+***
 05:
 ![GITHUB](https://github.com/yunimm/CSS-exercise/blob/main/05-interactive-rating-component-main/final.gif)
 # 版型來源
